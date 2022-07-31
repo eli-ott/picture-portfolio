@@ -510,9 +510,6 @@ const blit = (() => {
 })();
 
 let lastTime = Date.now();
-if(window.location.pathname == "/") {
-    multipleSplats(5);
-}
 update();
 
 function update() {
