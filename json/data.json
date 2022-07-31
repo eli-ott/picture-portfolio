@@ -1,0 +1,68 @@
+{
+    "vegetation": {
+        "description": "",
+        "images": {
+            "src": {
+
+            },
+            "alt": {
+
+            }
+        }
+    },
+    "portrait": {
+        "description": "",
+        "images": {
+            "src": {
+
+            },
+            "alt": {
+
+            }
+        }
+    },
+    "urban": {
+        "description": "",
+        "images": {
+            "src": {
+
+            },
+            "alt": {
+
+            }
+        }
+    },
+    "purple": {
+        "description": "",
+        "images": {
+            "src": {
+
+            },
+            "alt": {
+
+            }
+        }
+    },
+    "night": {
+        "description": "",
+        "images": {
+            "src": {
+
+            },
+            "alt": {
+
+            }
+        }
+    },
+    "urbex": {
+        "description": "",
+        "images": {
+            "src": {
+
+            },
+            "alt": {
+
+            }
+        }
+    }
+}
