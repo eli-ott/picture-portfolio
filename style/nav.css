@@ -1,0 +1,21 @@
+.burger {
+    position: fixed;
+    cursor: pointer;
+
+    top: 1%;
+    right: 1%;
+    opacity: 0;
+    
+    transform: scaleX(1.25);
+    -webkit-transform: scaleX(1.25);
+    -moz-transform: scaleX(1.25);
+    -ms-transform: scaleX(1.25);
+    -o-transform: scaleX(1.25);
+    animation: fadeIn .25s 2.5s ease forwards;
+    -webkit-animation: fadeIn .25s 2.5s ease forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
