@@ -19,14 +19,12 @@
 .main-title::after {
     content: "\A0";
     position: absolute;
-
     height: 2px;
     width: 55%;
     top: 50%;
-
     background: #fff;
-    animation: dashAppears 1s 6s ease-in-out forwards;
-    -webkit-animation: dashAppears 1s 6s ease-in-out forwards;
+    animation: dashAppears 1s 1.5s ease-in-out forwards;
+    -webkit-animation: dashAppears 1s 1.5s ease-in-out forwards;
     transform: scaleX(0);
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
@@ -59,33 +57,31 @@
 }
 .main-title span {
     display: inline-block;
-    transform-origin: left center;
-
+    transform-origin: center;
     opacity: 0;
-
-    transform: rotateY(5deg);
-    -webkit-transform: rotateY(5deg);
-    -moz-transform: rotateY(5deg);
-    -ms-transform: rotateY(5deg);
-    -o-transform: rotateY(5deg);
+    transform: rotateY(15deg);
+    -webkit-transform: rotateY(15deg);
+    -moz-transform: rotateY(15deg);
+    -ms-transform: rotateY(15deg);
+    -o-transform: rotateY(15deg);
 }
 .first-title {
-    animation: titleAppears 1s 5s ease-in-out forwards;
-    -webkit-animation: titleAppears 1s 5s ease-in-out forwards;
+    animation: titleAppears 1s 0.5s ease-in-out forwards;
+    -webkit-animation: titleAppears 1s 0.5s ease-in-out forwards;
 }
 .second-title {
-    animation: titleAppears 1s 5.5s ease-in-out forwards;
-    -webkit-animation: titleAppears 1s 5.5s ease-in-out forwards;
+    animation: titleAppears 1s 1s ease-in-out forwards;
+    -webkit-animation: titleAppears 1s 1s ease-in-out forwards;
 }
 @keyframes titleAppears {
     from {
         opacity: 0;
-        transform: rotateY(5deg);
-        -webkit-transform: rotateY(5deg);
-        -moz-transform: rotateY(5deg);
-        -ms-transform: rotateY(5deg);
-        -o-transform: rotateY(5deg);
-    }
+        transform: rotateY(15deg);
+        -webkit-transform: rotateY(15deg);
+        -moz-transform: rotateY(15deg);
+        -ms-transform: rotateY(15deg);
+        -o-transform: rotateY(15deg);
+}
     to {
         opacity: 1;
         transform: rotateY(0);
@@ -100,7 +96,6 @@
     text-decoration: none;
     font-family: playfair-italic;
     text-align: center;
-    
     height: 1%;
     width: 50%;
     top: 55%;
@@ -111,10 +106,9 @@
     -moz-transition: .25s;
     -ms-transition: .25s;
     -o-transition: .25s;
-
     color: var(--color);
-    animation: linkAppears 0.5s 6s ease-in-out forwards;
-    -webkit-animation: linkAppears 0.5s 6s ease-in-out forwards;
+    animation: linkAppears 0.5s 1.5s ease-in-out forwards;
+    -webkit-animation: linkAppears 0.5s 1.5s ease-in-out forwards;
 }
 @keyframes linkAppears {
     from {
