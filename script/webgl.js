@@ -17,8 +17,8 @@ let config = {
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 0, g: 0, b: 0 },
-    TRANSPARENT: true,
+    BACK_COLOR: { r: 255, g: 255, b: 255 },
+    TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 1024,
@@ -54,7 +54,7 @@ function getWebGLContext(canvas) {
         supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
     }
 
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clearColor(255.0, 255.0, 255.0, 0.0);
 
     const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
     let formatRGBA;
@@ -237,7 +237,7 @@ const splatShader = compileShader(gl.FRAGMENT_SHADER, `
         p.x *= aspectRatio;
         vec3 splat = exp(-dot(p, p) / radius) * color;
         vec3 base = texture2D(uTarget, vUv).xyz;
-        gl_FragColor = vec4(base + splat, 1.0);
+        gl_FragColor = vec4(base + splat, 0.0);
     }
 `);
 
@@ -268,7 +268,7 @@ const advectionManualFilteringShader = compileShader(gl.FRAGMENT_SHADER, `
     void main () {
         vec2 coord = gl_FragCoord.xy - dt * texture2D(uVelocity, vUv).xy;
         gl_FragColor = dissipation * bilerp(uSource, coord);
-        gl_FragColor.a = 1.0;
+        gl_FragColor.a = gl_FragColor.r;
     }
 `);
 
@@ -286,7 +286,7 @@ const advectionShader = compileShader(gl.FRAGMENT_SHADER, `
     void main () {
         vec2 coord = vUv - dt * texture2D(uVelocity, vUv).xy * texelSize;
         gl_FragColor = dissipation * texture2D(uSource, coord);
-        gl_FragColor.a = 1.0;
+        gl_FragColor.a = gl_FragColor.r;
     }
 `);
 
