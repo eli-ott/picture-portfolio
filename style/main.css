@@ -1,25 +1,6 @@
 :root {
     --color: #64e04f;
 }
-html,
-body {
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-
-    color: #ffffff;
-}
-canvas {
-    position: absolute;
-
-    z-index: -9999;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-}
-
 @font-face {
     font-family: playfair;
     src: url(../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
@@ -27,4 +8,43 @@ canvas {
 @font-face {
     font-family: playfair-italic;
     src: url(../assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+html,
+body {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    color: #000;
+}
+canvas {
+    position: absolute;
+
+    z-index: 5;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.category-container {
+    position: relative;
+
+    height: 5vh;
+    width: 100%;
+    margin-top: 2.5%;
+}
+.description {
+    position: absolute;
+    text-align: center;
+
+    font-family: playfair-italic;
+    font-size: 15px;
+    font-weight: 100;
+
+    width: 50%;
+    left: 25%;
+    height: 100%;
 }
