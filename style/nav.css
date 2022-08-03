@@ -46,11 +46,13 @@ nav {
     justify-content: center;
     align-items: flex-start;
     transform-origin: center right;
+
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 10;
+    
     background: #fff;
     transform: scaleX(0);
     -webkit-transform: scaleX(0);
@@ -77,17 +79,27 @@ nav {
 .navigation-links {
     cursor: pointer;
     text-decoration: none;
-
     font-family: playfair;
     font-size: 21px;
-
     width: 100%;
     padding: 1% 0;
     margin: 0;
     margin-left: 2.5%;
+    opacity: 0;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
 
     color: #000;
     border-bottom: solid 2px #000;
+    transform-origin: left;
+    transform: skewY(10deg);
+    -webkit-transform: skewY(10deg);
+    -moz-transform: skewY(10deg);
+    -ms-transform: skewY(10deg);
+    -o-transform: skewY(10deg);
 }
 
 .navigation-links:hover {
