@@ -10,7 +10,7 @@ document.getElementsByClassName('burger')[0].addEventListener('click', () => {
             links[i].style.cssText = `transition-delay: ${delay}s; transform: skewY(0deg); opacity: 1;`;
             delay += 0.15;
         }
-    }, 1250 + 150);
+    }, 1250);
 });
 
 document.getElementsByClassName('x')[0].addEventListener('click', () => {
@@ -23,5 +23,5 @@ document.getElementsByClassName('x')[0].addEventListener('click', () => {
     setTimeout(function() {
         document.getElementsByTagName('nav')[0].style.cssText = "transform: scaleX(0);";
         console.log((0.15 * links.length) * 10, links.length);
-    }, (150 * links.length) + 300);
+    }, (150 * links.length) + 150);
 });
