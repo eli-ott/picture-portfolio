@@ -3,48 +3,54 @@
         "name": "nature",
         "description": "Nature is what makes us all so we need to beautify it. This represent what we all need to survive in a civilization.",
         "images": {
-            "src": {},
-            "alt": {}
+            "src": [
+                "./assets/pictures/nature/photo_1.jpg"
+            ]
         }
     },
     {
         "name": "portrait",
         "description": "Nothing is better than a face without modifications or a specific pause.",
         "images": {
-            "src": {},
-            "alt": {}
+            "src": [
+                "./assets/pictures/portrait/photo_1.jpg"
+            ]
         }
     },
     {
         "name": "urban",
         "description": "A new perspective of the modern town. I want to valorize the architecture and the small details in each building.",
         "images": {
-            "src": {},
-            "alt": {}
+            "src": [
+                "./assets/pictures/urban/photo_1.jpg"
+            ]
         }
     },
     {
         "name": "purple",
         "description": "The destination to an other world is not that far. With this purple explore or re-explore the world in a different wat.",
         "images": {
-            "src": {},
-            "alt": {}
+            "src": [
+                "./assets/pictures/purple/photo_1.jpg"
+            ]
         }
     },
     {
         "name": "night",
         "description": "The yin of the every places, the peace after the noise. Its pure and reel, night time is one of the best time to take pictures.",
         "images": {
-            "src": {},
-            "alt": {}
+            "src": [
+                "./assets/pictures/night/photo_1.jpg"
+            ]
         }
     },
     {
         "name": "urban exploration",
         "description": "A new world represented with old cameras. A nice contrast to open a new horizon and expose the unseen parts of towns.",
         "images": {
-            "src": {},
-            "alt": {}
+            "src": [
+                "./assets/pictures/urbex/photo_1.jpg"
+            ]
         }
     }
 ]
