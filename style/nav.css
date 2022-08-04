@@ -27,7 +27,7 @@
     position: absolute;
 
     opacity: 1;
-    top: 1%;
+    top: calc(50% - 24px);
     right: 1%;
 
     transform: none;
@@ -69,22 +69,24 @@ nav {
 .links-container {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
 
     height: 100%;
-    width: 50%;
+    width: 100% ;
 }
 
 .navigation-links {
     cursor: pointer;
     text-decoration: none;
     font-family: playfair;
-    font-size: 21px;
+    text-align: center;
+    mix-blend-mode: difference;
+
+    z-index: 10;
+    font-size: 39px;
     width: 100%;
     padding: 1% 0;
-    margin: 0;
-    margin-left: 2.5%;
     opacity: 0;
     transition: 1s ease;
     -webkit-transition: 1s ease;
@@ -92,8 +94,7 @@ nav {
     -ms-transition: 1s ease;
     -o-transition: 1s ease;
 
-    color: #000;
-    border-bottom: solid 2px #000;
+    color: #fff;
     transform-origin: left;
     transform: skewY(10deg);
     -webkit-transform: skewY(10deg);
@@ -107,11 +108,30 @@ nav {
 }
 
 .link-image-container {
+    position: absolute;
+    overflow: hidden;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
+    
+    width: 20vw;
+    height: 55vh;
+    transition: 0.15s;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+}
+.link-image-container img {
+    pointer-events: none;
 
-    width: 50%;
     height: 100%;
+    width: 100%;
+}
+.transition-image {
+    position: absolute;
+    top: 0;
+    left: 100%;
 }
