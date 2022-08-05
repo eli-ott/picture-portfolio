@@ -1,8 +1,23 @@
+import { data } from './fetchData.js';
+
 let links = document.getElementsByClassName('navigation-links');
+let linksContainer = document.getElementsByClassName('links-container')[0];
+
+//creating the links
+for(let i = 0; i < data.length; i++) {
+    let link = document.createElement('a');
+
+    link.index = i;
+    link.classList.add('navigation-links');
+
+    link.innerText = data[i].name;
+
+    linksContainer.append(link);
+}
 
 //making the nav appears
 document.getElementsByClassName('burger')[0].addEventListener('click', () => {
-    document.getElementsByTagName('nav')[0].style.cssText = "transform: scaleX(1);";
+    document.getElementsByTagName('nav')[0].style.cssText = "transition: transform ease-in-out 1.25s; transform: scaleX(1);";
 
     let delay = 0;
     setTimeout(() => {
@@ -21,15 +36,27 @@ document.getElementsByClassName('x')[0].addEventListener('click', () => {
     }
 
     setTimeout(function () {
-        document.getElementsByTagName('nav')[0].style.cssText = "transform: scaleX(0);";
+        document.getElementsByTagName('nav')[0].style.cssText = "transition: transform ease-in-out 1.25s; transform: scaleX(0);";
         console.log((0.15 * links.length) * 10, links.length);
     }, (150 * links.length) + 150);
 });
 
+let linkPic = document.getElementsByClassName('link-image')[0];
+let transitionPic = document.getElementsByClassName('transition-image')[0];
 //creating the picture chang animation
 for(let i = 0; i < links.length; i++) {
     links[i].addEventListener('mouseover', function() {
-        let catergoryIndex = this.index;
+        let categoryIndex = parseInt(this.getAttribute('index'));
+        console.log(categoryIndex, data);
+
+        linkPic.src = transitionPic.src = data[categoryIndex].images.src[0];
+        
+    });
+    document.getElementsByClassName('links-container')[0].addEventListener('mouseenter', () => {
+        document.getElementsByClassName('link-image-container')[0].style.opacity = 1;
+    });
+    document.getElementsByClassName('links-container')[0].addEventListener('mouseleave', () => {
+        document.getElementsByClassName('link-image-container')[0].style.opacity = 0;
     });
 }
 
