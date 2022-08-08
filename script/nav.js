@@ -1,18 +1,32 @@
 import { data } from './fetchData.js';
 
-let links = document.getElementsByClassName('navigation-links');
-let linksContainer = document.getElementsByClassName('links-container')[0];
+const links = document.getElementsByClassName('navigation-links');
 
-//creating the links
-for(let i = 0; i < data.length; i++) {
-    let link = document.createElement('a');
+const linkPicContainer = document.getElementsByClassName('link-image-container')[0];
+const linkPic = document.getElementsByClassName('link-image')[0];
+const transitionPic = document.getElementsByClassName('transition-image')[0];
 
-    link.index = i;
-    link.classList.add('navigation-links');
+//creating the picture change animation
+for(let i = 0; i < links.length; i++) {
+    links[i].addEventListener('mouseover', function() {
+        let categoryIndex = this.getAttribute('index');
+        let picPath = `./assets/pictures/${data[categoryIndex].name}/`;
 
-    link.innerText = data[i].name;
-
-    linksContainer.append(link);
+        transitionPic.src = picPath + data[categoryIndex].images.src[0];
+        
+        transitionPic.style.cssText = 'animation: slidePic 0.15s 0s ease-in-out infinite';
+        setTimeout(() => {
+            linkPic.src = transitionPic.src;
+            transitionPic.style.cssText = 'animation: none;';
+            linkPic.style.cssText = 'left: 0;';
+        }, 150);
+    });
+    document.getElementsByClassName('links-container')[0].addEventListener('mouseenter', () => {
+        linkPicContainer.style.opacity = 1;
+    });
+    document.getElementsByClassName('links-container')[0].addEventListener('mouseleave', () => {
+        linkPicContainer.style.opacity = 0;
+    });
 }
 
 //making the nav appears
@@ -22,47 +36,27 @@ document.getElementsByClassName('burger')[0].addEventListener('click', () => {
     let delay = 0;
     setTimeout(() => {
         for (let i = 0; i < links.length; i++) {
-            links[i].style.cssText = `transition-delay: ${delay}s; transform: skewY(0deg); opacity: 1;`;
+            links[i].style.cssText = `pointer-events: all; transition-delay: ${delay}s; transform: skewY(0deg); opacity: 1;`;
             delay += 0.15;
         }
     }, 1250);
 });
 
 document.getElementsByClassName('x')[0].addEventListener('click', () => {
+    linkPicContainer.style.opacity = 0;
+
     let delay = 0;
     for (let i = 0; i < links.length; i++) {
-        links[i].style.cssText = `transition-delay: ${delay}s; transform: skewY(10deg); opacity: 0;`;
+        links[i].style.cssText = `pointer-events: none; transition-delay: ${delay}s; transform: skewY(10deg); opacity: 0;`;
         delay += 0.15;
     }
 
     setTimeout(function () {
         document.getElementsByTagName('nav')[0].style.cssText = "transition: transform ease-in-out 1.25s; transform: scaleX(0);";
-        console.log((0.15 * links.length) * 10, links.length);
     }, (150 * links.length) + 150);
 });
 
-let linkPic = document.getElementsByClassName('link-image')[0];
-let transitionPic = document.getElementsByClassName('transition-image')[0];
-//creating the picture chang animation
-for(let i = 0; i < links.length; i++) {
-    links[i].addEventListener('mouseover', function() {
-        let categoryIndex = parseInt(this.getAttribute('index'));
-        console.log(categoryIndex, data);
-
-        linkPic.src = transitionPic.src = data[categoryIndex].images.src[0];
-        
-    });
-    document.getElementsByClassName('links-container')[0].addEventListener('mouseenter', () => {
-        document.getElementsByClassName('link-image-container')[0].style.opacity = 1;
-    });
-    document.getElementsByClassName('links-container')[0].addEventListener('mouseleave', () => {
-        document.getElementsByClassName('link-image-container')[0].style.opacity = 0;
-    });
-}
-
 //making the pictures follow the cursor
-//https://www.superhi.com/video/smooth-movements-with-javascript
-
 const image = document.getElementsByClassName("link-image-container")[0];
 
 let mouseX = 0;

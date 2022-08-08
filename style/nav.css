@@ -131,3 +131,11 @@ nav {
     height: 100%;
     width: 100%;
 }
+@keyframes slidePic {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}

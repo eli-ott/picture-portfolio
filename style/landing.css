@@ -20,9 +20,6 @@
     font-size: 19px;
     font-weight: 100;
     letter-spacing: .75vh;
-
-    animation: reduceTitle 1s 2.5s ease-in-out forwards;
-    -webkit-animation: reduceTitle 1s 2.5s ease-in-out for;
 }
 .main-title::before,
 .main-title::after {
