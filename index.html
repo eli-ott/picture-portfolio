@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js" integrity="sha512-0tlhMhMGPohLm/YwaskxH7jJuUGqU/XPTl+HE0dWrhGbpEBRIZYMQdbHC0CmyNPzZKTBd8JoVZnvMcL7hzlFOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/landing.css">
     <link rel="stylesheet" href="./style/nav.css">
@@ -15,8 +16,7 @@
     <img src="./assets/svg/menu.svg" alt="menu icon" class="burger">
     <nav>
         <img src="./assets/svg/x.svg" alt="x icon" class="x">
-        <div class="links-container">
-        </div>
+        <div class="links-container"></div>
         <div class="link-image-container">
             <img src="./assets/pictures/nature/photo_1.jpg" alt="link image example" class="link-image">
             <img src="./assets/pictures/night/photo_1.jpg" alt="link image example" class="transition-image">
@@ -28,21 +28,13 @@
                 photographer</span></p>
     </section>
     <section class="category-container">
-        <p class="description">This is the description. This is the description. This is the description. This is the
-            description. This is the description. </p>
+        <p class="description"></p>
     </section>
-    <section class="pictures">
-        <img src="" alt="picture">
-        <img src="" alt="picture">
-        <img src="" alt="picture">
-        <img src="" alt="picture">
-        <img src="" alt="picture">
-        <img src="" alt="picture">
-    </section>
+    <section class="pictures-container"></section>
 
-    <canvas height="100vh" width="100vw"></canvas>
 
-    <script type="text/javascript" src="./script/fluidAnimation.js"></script>
+    <script type="text/javascript" src="./script/pictureAnimation.js"></script>
+    <script type="module" src="./script/main.js"></script>
     <script type="module" src="./script/nav.js"></script>
 </body>
 
