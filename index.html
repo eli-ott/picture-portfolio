@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js" integrity="sha512-0tlhMhMGPohLm/YwaskxH7jJuUGqU/XPTl+HE0dWrhGbpEBRIZYMQdbHC0CmyNPzZKTBd8JoVZnvMcL7hzlFOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/landing.css">
     <link rel="stylesheet" href="./style/nav.css">
@@ -13,6 +12,14 @@
 </head>
 
 <body>
+    <div class="full-screen-image-background">
+        <img src="./assets/svg/arrow-left.svg" alt="left arrow" class="arrow left">
+        <div class="full-screen-image-container">
+            <img src="" alt="" class="full-screen-image">
+            <p class="image-description">- Portra 160 - <br> La gacilly - 06/2021</p>
+        </div>
+        <img src="./assets/svg/arrow-right.svg" alt="right arrow" class="arrow right">
+    </div>
     <img src="./assets/svg/menu.svg" alt="menu icon" class="burger">
     <nav>
         <img src="./assets/svg/x.svg" alt="x icon" class="x">
@@ -24,16 +31,14 @@
     </nav>
     <section class="title-container">
         <p class="main-title"><span class="first-title">Bidault-Hervouet Eliott</span> <br><span
-                class="second-title">Film
-                photographer</span></p>
-    </section>
-    <section class="category-container">
-        <p class="description"></p>
-    </section>
-    <section class="pictures-container"></section>
+            class="second-title">Film
+            photographer</span></p>
+        </section>
+        <section class="category-container">
+            <p class="description"></p>
+        </section>
+        <section class="pictures-container" id="canvas"></section>
 
-
-    <script type="text/javascript" src="./script/pictureAnimation.js"></script>
     <script type="module" src="./script/main.js"></script>
     <script type="module" src="./script/nav.js"></script>
 </body>

@@ -19,13 +19,63 @@ body {
 
     color: #000;
 }
-canvas {
-    display: block;
-    position: fixed;
+.cursor {
+    background: none;
+    position: absolute;
 
-    z-index: -1;
+    z-index: 8;
+    width: 30px;
+    height: 30px;
+    border-radius: 50vh;
+
+    border: solid 2px #000;
+}
+.full-screen-image-background {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     left: 0;
+    transition: 0.5s ease;
+    opacity: 0;
+    
+    background: #000000ab;
+}
+.full-screen-image-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 95%
+}
+.full-screen-image.horizontal {
+    width: 60%;
+}
+.full-screen-image.vertical {
+    width: 30%;
+}
+.image-description {
+    text-align: center;
+    font-family: playfair-italic;
+    font-size: 17px;
+
+    color: #fff;
+}
+.arrow {
+    cursor: pointer;
+
+    width: 2.5%;
+    margin: 1%;
+    transition: opacity 0.25s ease;
 }
 
 .category-container {
@@ -52,16 +102,16 @@ canvas {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    align-items: center;
 
     width: 100%;
     
     background: none;
 }
 .picture {
-    width: 20.5%;
-    margin-bottom: 5%;
+    cursor: zoom-in;
+    margin: 0 2.5% 5% 2.5%;
     opacity: 0;
-    perspective: 25%;
 
     transform-origin: bottom left;
     transform: rotateZ(3deg);
@@ -69,4 +119,10 @@ canvas {
     -moz-transform: rotateZ(3deg);
     -ms-transform: rotateZ(3deg);
     -o-transform: rotateZ(3deg);
+}
+.picture.horizontal {
+    width: min(767px);
+}
+.picture.vertical {
+    width: min(512px);
 }

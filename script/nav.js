@@ -14,12 +14,12 @@ for(let i = 0; i < links.length; i++) {
 
         transitionPic.src = picPath + data[categoryIndex].images.src[0];
         
-        transitionPic.style.cssText = 'animation: slidePic 0.15s 0s ease-in-out infinite';
+        transitionPic.style.cssText = 'opcity: 1; animation: slidePic 0.2s 0s ease-in-out infinite; z-index: 10;';
         setTimeout(() => {
             linkPic.src = transitionPic.src;
-            transitionPic.style.cssText = 'animation: none;';
-            linkPic.style.cssText = 'left: 0;';
-        }, 150);
+            transitionPic.style.cssText = 'opcity: 0; animation: none;';
+            linkPic.style.cssText = 'left: 0; z-index: -1;';
+        }, 200);
     });
     document.getElementsByClassName('links-container')[0].addEventListener('mouseenter', () => {
         linkPicContainer.style.opacity = 1;
@@ -46,6 +46,9 @@ document.getElementsByClassName('x')[0].addEventListener('click', () => {
     linkPicContainer.style.opacity = 0;
 
     let delay = 0;
+    document.querySelectorAll('.navigation-links').forEach(link => {
+        link.style.cssText = 'pointer-events: none;';
+    });
     for (let i = 0; i < links.length; i++) {
         links[i].style.cssText = `pointer-events: none; transition-delay: ${delay}s; transform: skewY(10deg); opacity: 0;`;
         delay += 0.15;
@@ -77,8 +80,8 @@ function movePicture() {
     imageX = imageX + (distX * speed);
     imageY = imageY + (distY * speed);
 
-    let centerX = Math.max(Math.min(imageX - (image.offsetWidth / 2), window.innerWidth - image.offsetWidth), 0);
-    let centerY = Math.max(Math.min(imageY - (image.offsetHeight / 2), window.innerHeight - image.offsetHeight), 0);
+    let centerX = Math.max(Math.min(imageX - (image.clientWidth / 2), window.innerWidth - image.clientWidth), 0);
+    let centerY = Math.max(Math.min(imageY - (image.clientHeight / 2), window.innerHeight - image.clientHeight), 0);
 
     image.style.left = `${centerX}px`;
     image.style.top = `${centerY}px`;
@@ -88,6 +91,6 @@ function movePicture() {
 movePicture();
 
 document.addEventListener("mousemove", function (event) {
-    mouseX = event.pageX;
-    mouseY = event.pageY;
+    mouseX = event.clientX;
+    mouseY = event.clientY;
 });
