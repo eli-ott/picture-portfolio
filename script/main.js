@@ -68,12 +68,13 @@ for(let i = 0; i < arrows.length; i++) {
             document.getElementsByClassName('right')[0].style.cssText = 'opacity: 1; pointer-events: all;';
         }
 
-        document.getElementsByClassName('picture')[nextIndex - 1].className.includes('vertical') ? fullSizePic.setAttribute('class', 'full-screen-image vertical'): fullSizePic.setAttribute('class', 'full-screen-image horizontal');
+        pictures[nextIndex - 1].className.includes('vertical') ? fullSizePic.setAttribute('class', 'full-screen-image vertical'): fullSizePic.setAttribute('class', 'full-screen-image horizontal');
         
         splitSrc[splitSrc.length - 1] = `photo_${nextIndex}.jpg`;
         
         fullSizePic.src = splitSrc.join('/');
-        // imageDescription.innerHTML = pictures[nextIndex].getAttribute('description');
+        console.log(nextIndex);
+        imageDescription.innerHTML = pictures[nextIndex - 1].getAttribute('description');
     });
 }
 
@@ -94,6 +95,8 @@ const changePicture = (categoryIndex) => {
 
         newPic.src = picPath + data[categoryIndex].images.src[i];
         newPic.setAttribute('loading', 'lazy');
+        newPic.setAttribute('index', i);
+        newPic.setAttribute('description', data[categoryIndex].images.description[i]);
         newPic.classList.add('picture');
 
         newPic.onload = function() {
@@ -119,6 +122,7 @@ const changePicture = (categoryIndex) => {
 
             this.className.includes('vertical') ? fullSizePic.setAttribute('class', 'full-screen-image vertical'): fullSizePic.setAttribute('class', 'full-screen-image horizontal');
             fullSizeBackground.style.cssText = 'pointer-events: all; opacity: 1;';
+            imageDescription.innerHTML = newPic.getAttribute('description');
         });
         
         pictureContainer.append(newPic);
