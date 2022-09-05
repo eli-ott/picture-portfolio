@@ -40,41 +40,46 @@ fullSizeBackground.addEventListener('click', function() {
     fullSizeBackground.style.cssText = 'pointer-events: none; opacity: 0;';
 });
 let arrows = document.getElementsByClassName('arrow');
+let fullScreenContainer = document.getElementsByClassName('full-screen-image-container')[0];
 for(let i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener('click', function(e) {
         e.stopPropagation();
 
-        let pictures = document.getElementsByClassName('picture');
+        fullScreenContainer.style.cssText = 'transition: opacity 0.125s ease; opacity: 0;';
+        setTimeout(() => {
+            let pictures = document.getElementsByClassName('picture');
 
-        let splitSrc = fullSizePic.src.split('/');
+            let splitSrc = fullSizePic.src.split('/');
 
-        let picNativeSrc = splitSrc[splitSrc.length - 1];
+            let picNativeSrc = splitSrc[splitSrc.length - 1];
 
-        let picIndex = picNativeSrc.replace(/\D/g, "");
+            let picIndex = picNativeSrc.replace(/\D/g, "");
 
-        let nextIndex;
-        if(this.className.includes('left')) {
-            nextIndex = --picIndex;
-        } else if(this.className.includes('right')) {
-            nextIndex = ++picIndex;
-        }
+            let nextIndex;
+            if(this.className.includes('left')) {
+                nextIndex = --picIndex;
+            } else if(this.className.includes('right')) {
+                nextIndex = ++picIndex;
+            }
 
-        if(nextIndex == 1) {
-            document.getElementsByClassName('left')[0].style.cssText = 'opacity: 0; pointer-events: none;';
-        } else if(nextIndex == pictures.length - 1) {
-            document.getElementsByClassName('right')[0].style.cssText = 'opacity: 0; pointer-events: none;';
-        } else {
-            document.getElementsByClassName('left')[0].style.cssText = 'opacity: 1; pointer-events: all;';
-            document.getElementsByClassName('right')[0].style.cssText = 'opacity: 1; pointer-events: all;';
-        }
+            if(nextIndex == 1) {
+                document.getElementsByClassName('left')[0].style.cssText = 'opacity: 0; pointer-events: none;';
+            } else if(nextIndex == pictures.length - 1) {
+                document.getElementsByClassName('right')[0].style.cssText = 'opacity: 0; pointer-events: none;';
+            } else {
+                document.getElementsByClassName('left')[0].style.cssText = 'opacity: 1; pointer-events: all;';
+                document.getElementsByClassName('right')[0].style.cssText = 'opacity: 1; pointer-events: all;';
+            }
 
-        pictures[nextIndex - 1].className.includes('vertical') ? fullSizePic.setAttribute('class', 'full-screen-image vertical'): fullSizePic.setAttribute('class', 'full-screen-image horizontal');
-        
-        splitSrc[splitSrc.length - 1] = `photo_${nextIndex}.jpg`;
-        
-        fullSizePic.src = splitSrc.join('/');
-        console.log(nextIndex);
-        imageDescription.innerHTML = pictures[nextIndex - 1].getAttribute('description');
+            pictures[nextIndex - 1].className.includes('vertical') ? fullSizePic.setAttribute('class', 'full-screen-image vertical'): fullSizePic.setAttribute('class', 'full-screen-image horizontal');
+            
+            splitSrc[splitSrc.length - 1] = `photo_${nextIndex}.jpg`;
+            
+            fullSizePic.src = splitSrc.join('/');
+            console.log(nextIndex);
+            imageDescription.innerHTML = pictures[nextIndex - 1].getAttribute('description');
+            fullScreenContainer.style.cssText = 'transition: opacity 0.125s ease; opacity: 1;'
+        }, 125);
     });
 }
 
