@@ -9,6 +9,15 @@
     font-family: playfair-italic;
     src: url(../assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
+::-webkit-scrollbar {
+    width: 5px;
+
+    background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+}
 
 html,
 body {
