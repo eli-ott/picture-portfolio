@@ -25,4 +25,8 @@
     .link-image-container {
         display: none;
     }
+.navigation-links {
+        padding-left: 0;
+width: 75%;
+    }
 }
