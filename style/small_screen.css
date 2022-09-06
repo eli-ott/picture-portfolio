@@ -1,0 +1,28 @@
+@media screen and (max-width: 800px) {
+    .main-title::before,
+    .main-title::after {
+        display: none;
+    }
+    .description {
+        width: 100%;
+        margin-left: 0;
+    }
+    .picture.horizontal {
+        width: min(97.5%);
+    }
+    .picture.vertical {
+        width: min(65%);
+    }
+    .full-screen-image.horizontal {
+        width: 95%;
+    }
+    .full-screen-image.vertical {
+        width: 75%;
+    }
+    .arrow {
+        width: 5%;
+    }
+    .link-image-container {
+        display: none;
+    }
+}

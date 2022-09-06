@@ -1,0 +1,17 @@
+@media screen and (min-width: 801px) and (max-width: 1450px) {
+    .main-title::before,
+    .main-title::after {
+        display: none;
+    }
+    .description {
+        width: 75%;
+        margin-left: 12.5%;
+    }
+    .link-image-container {
+        height: 350px;
+        width: 250px;
+    }
+    .navigation-links {
+        padding-left: 0;
+    }
+}
