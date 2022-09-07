@@ -1,4 +1,9 @@
 @media screen and (max-width: 800px) {
+    .burger,
+    .x {
+        top: 1vh;
+        right: 1vh;
+    }
     .main-title::before,
     .main-title::after {
         display: none;
@@ -13,14 +18,17 @@
     .picture.vertical {
         width: min(65%);
     }
+    .picture:nth-of-type(1) {
+        margin-top: 5%;
+    }
     .full-screen-image.horizontal {
-        width: 95%;
+        width: 100%;
     }
     .full-screen-image.vertical {
-        width: 75%;
+        width: 85%;
     }
     .arrow {
-        width: 5%;
+        width: 7.5%;
     }
     .link-image-container {
         display: none;
