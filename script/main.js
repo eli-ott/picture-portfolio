@@ -150,7 +150,6 @@ const changePicture = (categoryIndex) => {
 changePicture(0);
 
 window.addEventListener('keydown', e => {
-    console.log(e.key);
     if(e.key == "ArrowLeft") {
         document.getElementsByClassName('left')[0].dispatchEvent(new Event('click'));
     } else if(e.key == "ArrowRight") {

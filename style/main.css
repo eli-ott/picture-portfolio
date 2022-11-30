@@ -18,6 +18,10 @@
     background: #000;
     border-radius: 10px;
 }
+::selection {
+    background-color: #000001;
+    color: white;
+}
 
 html,
 body {

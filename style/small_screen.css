@@ -1,44 +1,88 @@
 @media screen and (max-width: 800px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    .burger,
-    .x {
-        top: 1vh;
-        right: 1vh;
-    }
-    .main-title::before,
-    .main-title::after {
-        display: none;
-    }
-    .description {
-        width: 100%;
-        margin-left: 0;
-        margin-bottom: 2.5vh;
-    }
-    .picture.horizontal {
-        width: min(97.5%);
-    }
-    .picture.vertical {
-        width: min(65%);
-    }
-    .picture:nth-of-type(1) {
-        margin-top: 5%;
-    }
-    .full-screen-image.horizontal {
-        width: 100%;
-    }
-    .full-screen-image.vertical {
-        width: 85%;
-    }
-    .arrow {
-        width: 7.5%;
-    }
-    .link-image-container {
-        display: none;
-    }
-.navigation-links {
-        padding-left: 0;
-width: 75%;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .burger,
+  .x {
+    top: 1vh;
+    right: 1vh;
+  }
+  .main-title::before,
+  .main-title::after {
+    display: none;
+  }
+  .description {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2.5vh;
+  }
+  .picture.horizontal {
+    width: min(97.5%);
+  }
+  .picture.vertical {
+    width: min(65%);
+  }
+  .picture:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  .full-screen-image.horizontal {
+    width: 100%;
+  }
+  .full-screen-image.vertical {
+    width: 85%;
+  }
+  .arrow {
+    width: 7.5%;
+  }
+  .link-image-container {
+    display: none;
+  }
+  .navigation-links {
+    padding-left: 0;
+    width: 75%;
+  }
+  .paragraph {
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100vh;
+  }
+  .paragraph p {
+    width: 100%;
+  }
+  .paragraph h3 {
+    text-align: center;
+    text-decoration: underline;
+
+    font-size: 57px;
+    width: 100%;
+  }
+  .paragraph.motives {
+    flex-flow: column nowrap;
+  }
+  span.who::after,
+  span.why::after {
+    backdrop-filter: none;
+    width: 0;
+    height: 0;
+  }
+  .cta {
+    width: 50%;
+    padding: 2%;
+  }
+  .cameras > h3 {
+    font-size: 43px;
+  }
+  .cameras-card {
+    flex-flow: column nowrap;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 15%;
+  }
+  .pictures-container > .cta {
+    margin: 15vh 0;
+  }
+  .exhibit-picture {
+    width: 95%;
+  }
 }

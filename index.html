@@ -1,47 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/landing.css">
-    <link rel="stylesheet" href="./style/nav.css">
-    <link rel="stylesheet" href="./style/medium_screen.css">
-    <link rel="stylesheet" href="./style/small_screen.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/landing.css" />
+    <link rel="stylesheet" href="./style/nav.css" />
+    <link rel="stylesheet" href="./style/presentation.css" />
+    <link rel="stylesheet" href="./style/medium_screen.css" />
+    <link rel="stylesheet" href="./style/small_screen.css" />
     <title>Bidault-Hervouet Eliott gallery</title>
-</head>
+  </head>
 
-<body>
-    <div class="full-screen-image-background">
-        <img src="./assets/svg/arrow-left.svg" alt="left arrow" class="arrow left">
-        <div class="full-screen-image-container">
-            <img src="" alt="" class="full-screen-image">
-            <p class="image-description"></p>
+  <body>
+    <h1 class="main-title">
+      <span class="first-title">Bidault-Hervouet Eliott</span> <br />
+      <span class="second-title">Film photographer</span>
+    </h1>
+    <section class="presentation">
+      <div class="paragraph introduction">
+        <h3><span class="who">Who</span> am I ?</h3>
+        <p>
+          Hi, I'm Eliott. I'm a film photographer for
+          <span id="years"></span> years now. I've started photography when I
+          retrieved my grandfather's camera. <br />
+          Since then I got more and more into photography, learned about angles,
+          lightning and more. Now I have 3 camera and all serves its own
+          purpose. <br />
+          I personnaly like architectures and art, and I think it sometimes
+          helps me to get the perfect shot. <br />
+          I also like experimenting with my pictures, trying new things that
+          could be unconventional.
+        </p>
+      </div>
+      <div class="paragraph motives">
+        <h3><span class="why">Why</span> photography ?</h3>
+        <p>
+          The thing that I love about photography is how easy it is to interpret
+          the same pictures in multiple ways. Everyone will have its own
+          interpretation depending on its life and experiences. <br />
+          Moreover, I like to see the smallest things in life that makes it
+          beautiful. And with photography I can focus on them and make them big
+          things with a huge importance. <br />
+          I think photography helps me showing how I view the earth and the
+          vision I have of it.
+        </p>
+      </div>
+      <div class="cta-container">
+        <a href="./pictures.html" class="cta">See the gallery</a>
+      </div>
+    </section>
+    <section class="cameras">
+      <h3>My cameras :</h3>
+      <div class="cameras-card">
+        <div class="card">
+          <img
+            src="./assets/pictures/cameras/prakctica.jpg"
+            alt="Pracktica MTL 3"
+          />
+          <p>
+            That was my very first camera and my
+            <span class="stressed">grandfather's camera</span>. It's pretty
+            visible, but it still works perfectly. <br />
+            I use it when photographing a
+            <span class="stressed">nature or urban</span> environment that could
+            potentially be far away. But I'm still using it for more common
+            pictures. <br />
+            <br />
+            <u>Camera</u> : Prakctica MTL3 <br />
+            <u>Lenses</u> : 29mm - f2.8/22 ; 50mm - f1.8/16 ; 80-200mm - f3.9/22
+          </p>
         </div>
-        <img src="./assets/svg/arrow-right.svg" alt="right arrow" class="arrow right">
-    </div>
-    <img src="./assets/svg/menu.svg" alt="menu icon" class="burger">
-    <nav>
-        <img src="./assets/svg/x.svg" alt="x icon" class="x">
-        <div class="links-container"></div>
-        <div class="link-image-container">
-            <img src="./assets/pictures/nature/photo_1.jpg" alt="link image example" class="link-image">
-            <img src="./assets/pictures/night/photo_1.jpg" alt="link image example" class="transition-image">
+        <div class="card">
+          <img
+            src="./assets/pictures/cameras/yashica.jpg"
+            alt="Yashica Electro 35 G"
+          />
+          <p>
+            This camera was a
+            <span class="stressed">gift from my brother</span>. It's very easy
+            to use because it's semi-automatic, it tells you if your picture
+            will be overexposed or underexposed, then you just change the
+            settings. <br />
+            I usually take city picture with color film with this camera.
+            Because of its close range of lenses its perfect for
+            <span class="stressed">inner city</span> pictures. <br />
+            <br />
+            <u>Camera</u> : Yashica Electro 35 G <br />
+            <u>Lenses</u> : 37.7mm - f1.7/16 ; 45mm - f1.7/16 ; 58.4mm - 1.7/16
+          </p>
         </div>
-    </nav>
-        <h1 class="main-title">
-            <span class="first-title">Bidault-Hervouet Eliott</span> <br>
-            <span class="second-title">Film photographer</span>
-        </h1>
-        <section class="category-container">
-            <p class="description"></p>
-        </section>
-        <section class="pictures-container" id="canvas"></section>
+        <div class="card">
+          <img
+            src="./assets/pictures/cameras/konica.jpg"
+            alt="Konica Autoreflex T3"
+          />
+          <p>
+            This camera was a <span class="stressed">gift from a friend</span>.
+            I really like this one because it has a lot of details in it that
+            makes your like easier. And its my only reflex camera wich makes it
+            even more convenient. <br />
+            I shoot <span class="stressed">moving object or portrait</span> with
+            it because its so easy too change lenses and have the angle you need
+            when you need it. <br />
+            <br />
+            <u>Camera</u> : Konica Autoreflex T3 <br />
+            <u>Lenses</u> : 28mm - f3.5/16 ; 50mm - f1.7/16
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="./script/main.js"></script>
-    <script type="module" src="./script/nav.js"></script>
-</body>
+    <section class="small-exhibit">
+      <h3><u>Small-exhibit</u></h3>
+      <div class="pictures-container">
+        <img
+          class="exhibit-picture"
+          src="./assets/pictures/nature/photo_41.jpg"
+          alt="photo_41 nature"
+        />
+        <img
+          class="exhibit-picture"
+          src="./assets/pictures/portrait/photo_1.jpg"
+          alt="photo_1 portrait"
+        />
+        <img
+          class="exhibit-picture"
+          src="./assets/pictures/urban/photo_2.jpg"
+          alt="photo_2 urban"
+        />
+        <img
+          class="exhibit-picture"
+          src="./assets/pictures/purple/photo_1.jpg"
+          alt="photo_1 purple"
+        />
+        <img
+          class="exhibit-picture"
+          src="./assets/pictures/night/photo_11.jpg"
+          alt="photo_11 night"
+        />
+        <a href="./pictures.html" class="cta">See more pictures</a>
+        <img
+          class="exhibit-picture"
+          src="./assets/pictures/urbex/photo_13.jpg"
+          alt="photo_13 urbex"
+        />
+      </div>
+    </section>
 
+    <script>
+      let date = new Date();
+      let currentYear = date.getFullYear().toString();
+      let startingYear = "2020";
+
+      document.getElementById("years").innerHTML = currentYear - startingYear;
+
+      let cta = document.getElementsByClassName('cta');
+
+      for(let i = 0; i < cta.length; i++) {
+        document.getElementsByClassName('cta')[i].addEventListener('click', () => {
+          
+        });
+      }
+    </script>
+  </body>
 </html>

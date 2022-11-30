@@ -14,4 +14,17 @@
     .navigation-links {
         padding-left: 0;
     }
+    .paragraph h3 {
+        font-size: 57px;
+    }
+    span.who::after {
+        height: 150px;
+        width: 250px;
+        top: -75%;
+    }
+    span.why::after {
+        height: 150px;
+        width: 150px;
+        left: -30%;
+    }
 }
