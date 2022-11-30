@@ -47,7 +47,7 @@
     height: 100vh;
   }
   .paragraph p {
-    width: 100%;
+    width: 95%;
   }
   .paragraph h3 {
     text-align: center;
@@ -55,6 +55,7 @@
 
     font-size: 57px;
     width: 100%;
+    margin: 0;
   }
   .paragraph.motives {
     flex-flow: column nowrap;
